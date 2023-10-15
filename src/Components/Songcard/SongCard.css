@@ -1,0 +1,11 @@
+.song-card-container{
+    width: 100%;
+    height: 62%;
+    background-color: #27354d;
+    border-radius: 20px;
+    border-bottom-right-radius: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
