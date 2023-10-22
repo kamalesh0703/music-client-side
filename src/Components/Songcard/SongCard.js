@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './SongCard.css';
 import AlbumImage from './AlbumImage';
 import AlbumInfo from './AlbumInfo';

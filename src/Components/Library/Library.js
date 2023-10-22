@@ -5,7 +5,7 @@ import { AiFillPlayCircle } from 'react-icons/ai';
 import { IconContext } from "react-icons/lib";
 import {useNavigate} from 'react-router-dom';
 
-function Library() {
+function Library(setCurrentIndex) {
   const navigation=useNavigate();
   const [playlists, setPlaylists] = useState(null);
   useEffect(() => {

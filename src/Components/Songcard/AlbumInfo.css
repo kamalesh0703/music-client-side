@@ -1,0 +1,58 @@
+:root{
+    --font-color-primary: #c3d0e3;
+}
+
+.albumInfo-container{
+    margin-top: 10px;
+    width: 80%;
+}
+.albumInfo-container p{
+    margin: 3px auto !important;
+}
+.albumName-container{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--font-color-primary);
+}
+.marquee{
+    white-space: nowrap;
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+    padding-left: 100%;
+}
+@keyframes marquee{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.album-info{
+    font-weight: 500;
+    font-size: 14px;
+    color: #9aa9c2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+}
+.album-info>p{
+    overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
+}
+.album-release{
+    font-size: 12px;
+    font-weight: 400;
+    color: #9aa9c2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

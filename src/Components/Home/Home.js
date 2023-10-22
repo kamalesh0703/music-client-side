@@ -34,8 +34,8 @@ function Home() {
         <div className="main-body screen-container">
           <Slidebar />
           <Routes>
-            <Route path="/Library" element={<Library/>}></Route>
-            <Route path="/" element={<Feed/>}></Route>
+            <Route path="/" element={<Library/>}></Route>
+            <Route path="/Feed" element={<Feed/>}></Route>
             <Route path="/Favourites" element={<Favourites />}></Route>
             <Route path="/Player" element={<Player />}></Route>
             <Route path="/Trending" element={<Trending />}></Route>

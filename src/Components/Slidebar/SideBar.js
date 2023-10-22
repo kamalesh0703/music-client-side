@@ -6,7 +6,6 @@ import { FaPlay, FaSignOutAlt, FaGripfire } from "react-icons/fa";
 import { MdFavorite, MdSpaceDashboard } from "react-icons/md";
 import { IoLibrary } from "react-icons/io5";
 import apiClient from "../../Spotify";
-
 function SideBar() {
   const [image, setImage] = useState(
     profileimg
@@ -20,7 +19,7 @@ function SideBar() {
     <div className="Sidebar-container">
       <img src={image} className="profile-img" alt="profile" />
       <div className="Sidebar-btn">
-        <SideBarButton to="/" title="Feed" icon={<MdSpaceDashboard />} />
+        <SideBarButton to="/Feed" title="Feed" icon={<MdSpaceDashboard />} />
         <SideBarButton to="/Trending" title="Trending" icon={<FaGripfire />} />
         <SideBarButton to="/Player" title="Player" icon={<FaPlay />} />
         <SideBarButton
@@ -28,7 +27,7 @@ function SideBar() {
           title="Favorities"
           icon={<MdFavorite />}
         />
-        <SideBarButton to="/Library" title="Library" icon={<IoLibrary />} />
+        <SideBarButton to="/" title="Library" icon={<IoLibrary />} />
       </div>
       <SideBarButton to="/Sign Out" title="Sign Out" icon={<FaSignOutAlt />} />
     </div>

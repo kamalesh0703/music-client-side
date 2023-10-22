@@ -1,0 +1,41 @@
+.control-container{
+    display: flex;
+    margin: 0%;
+    padding: 0%;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+.action-btn{
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.action-btn:hover{
+    transform: scale(1.1);
+}
+.play-pause-btn{
+  width: 55px;
+  height: 55px;
+  border-radius: 25px;
+  background-color: #c96850;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: inset -4px -4px 10px #55291e, inset 4px 4px 10px 1px #ffae9a;
+}
+.play-pause-btn.active-btn {
+    box-shadow: inset -4px -4px 10px #ff8769, inset 4px 4px 10px 1px #753d30;
+}
+  
+  .play-pause-btn:hover {
+    transform: scale(1.05);
+  }

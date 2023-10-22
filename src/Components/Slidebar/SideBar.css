@@ -24,7 +24,7 @@
 .profile-img {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 20px;
 }
 .btn-details{
     display: flex;
@@ -45,7 +45,7 @@
 }
 .btn-title{
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
 }
 .active{
     background-color:#eda77e;
