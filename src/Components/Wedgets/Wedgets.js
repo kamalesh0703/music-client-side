@@ -1,19 +1,49 @@
 import React, { useState,useEffect } from 'react';
 import apiClient from '../../Spotify';
+import WedgetCard from './WedgetCard';
+import './Wedgets.css';
 
-function Wedgets({artistId}) {
+function Wedgets({artistID}) {
     const [similar,setSimilar]=useState([]);
     const [feature,setFeature]=useState([]);
     const [newRelease,setNewRelease]=useState([]);
-    console.log(artistId);
     useEffect(()=>{
-    apiClient.get(`artists/${artistId}/related-artists`)
-    .then(res =>{
-        res.data?.artists?.slice(0,3)
+      console.log(feature);
     })
-    },[])
+    useEffect(()=>{
+      if (artistID) {
+        apiClient
+          .get(`/artists/${artistID}/related-artists`)
+          .then((res) => {
+            const a = res.data?.artists.slice(0, 3);
+            setSimilar(a);
+          })
+          .catch((err) => console.error(err));
+  
+        apiClient
+          .get(`/browse/featured-playlists`)
+          .then((res) => {
+            const a = res.data?.playlists.items.slice(0, 3);
+            setFeature(a);
+           
+          })
+          .catch((err) => console.error(err));
+  
+        apiClient
+          .get(`/browse/new-releases`)
+          .then((res) => {
+            const a = res.data?.albums.items.slice(0, 3);
+            setNewRelease(a);
+          })
+          .catch((err) => console.error(err));
+      }
+    },[artistID])
   return (
-    <div>Wedgets</div>
+    <div className='wedget-container'>
+      <WedgetCard title="Similar Artist" similar={similar}/>
+      <WedgetCard title="Made for you" similar={feature}/>
+      <WedgetCard title="New Release" similar={newRelease}/>
+    </div>
   )
 }
 

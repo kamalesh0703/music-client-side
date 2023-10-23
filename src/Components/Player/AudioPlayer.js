@@ -44,7 +44,7 @@ const handlePrev=()=>{
   useEffect(() => {
     if (audioRef.current.src) {
       if (isPlaying) {
-         audioRef.current.play();
+       audioRef.current.play();
         startTimer();
       } else {
         clearInterval(intervelRef.current);

@@ -24,7 +24,6 @@ useEffect(()=>{
 useEffect(()=>{
   setCurrentTrack(tracks[currentIndex]?.track);
 },[currentIndex, tracks])
-console.log(currentTrack);
   return (
     <div className='player-container'>
       <div className='left-player-container'>
