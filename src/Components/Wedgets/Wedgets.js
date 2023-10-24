@@ -5,10 +5,10 @@ import './Wedgets.css';
 
 function Wedgets({artistID}) {
     const [similar,setSimilar]=useState([]);
-    const [feature,setFeature]=useState([]);
+    const [featured,setFeatured]=useState([]);
     const [newRelease,setNewRelease]=useState([]);
     useEffect(()=>{
-      console.log(feature);
+      console.log(artistID);
     })
     useEffect(()=>{
       if (artistID) {
@@ -24,7 +24,7 @@ function Wedgets({artistID}) {
           .get(`/browse/featured-playlists`)
           .then((res) => {
             const a = res.data?.playlists.items.slice(0, 3);
-            setFeature(a);
+            setFeatured(a);
            
           })
           .catch((err) => console.error(err));
@@ -41,8 +41,8 @@ function Wedgets({artistID}) {
   return (
     <div className='wedget-container'>
       <WedgetCard title="Similar Artist" similar={similar}/>
-      <WedgetCard title="Made for you" similar={feature}/>
-      <WedgetCard title="New Release" similar={newRelease}/>
+      <WedgetCard title="Made for you" featured={featured}/>
+      <WedgetCard title="New Release" newRelease={newRelease}/>
     </div>
   )
 }

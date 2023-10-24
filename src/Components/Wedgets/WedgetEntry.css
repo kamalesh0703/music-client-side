@@ -1,0 +1,31 @@
+.wedgetEntry-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.entry-image{
+    width: 50px ;
+    height: 50px;
+    border-radius: 20px;
+}
+.entry-title{
+    color: #c9d0e3;
+font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.entry-subtitle{
+    font-size: 12px;
+    font-weight: 400;
+    color: #c4d0e73c;
+}
+.entry-right-body{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
