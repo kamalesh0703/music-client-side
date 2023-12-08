@@ -2,7 +2,6 @@ import React from "react";
 import "./WedgetEntry.css";
 
 function WedgetEntry({ image, title, subtitle }) {
-  console.log("titel", title, "subtitle,", subtitle);
   return (
     <div className="wedgetEntry-container">
       <img src={image} alt={title} className="entry-image" />

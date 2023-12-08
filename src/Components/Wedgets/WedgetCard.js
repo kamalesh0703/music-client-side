@@ -1,16 +1,10 @@
 import React, { useEffect } from 'react';
 import './WedgetCard.css';
 import WedgetEntry from './WedgetEntry';
+import { IconContext } from "react-icons/lib";
+import {FiChevronRight} from 'react-icons/fi';
 
 function WedgetCard({title,similar,featured,newRelease}) {
-  console.log(
-    "similar",
-    similar,
-    "featured",
-    featured,
-    "newRelease",
-    newRelease
-  );
   return (
     <div className="widgetcard-container">
       <p className="wedgets-title">{title}</p>
@@ -40,6 +34,13 @@ function WedgetCard({title,similar,featured,newRelease}) {
             />
           ))
         : null}
+        <div className='wedget-fade'>
+          <div className='fade-btn'>
+          <IconContext.Provider value={{size:"25px",color:"#c4d0e3"}}>
+              <FiChevronRight/>
+            </IconContext.Provider>
+          </div>
+        </div>
     </div>
   )
 }

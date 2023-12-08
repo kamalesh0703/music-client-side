@@ -1,16 +1,22 @@
 .wedget-container{
-    width: 95%;
+  width: 95%;
   height: 50%;
   margin: 2% auto 3%;
   border-radius: 30px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: start;
+  align-items: start; 
+  display: grid;
+  column-gap: 2%;
+  grid-template-columns: 32% 32% 32%;
+  overflow: hidden;
+  padding: 15px;
   background: rgb(30, 42, 62);
   background: linear-gradient(
-0deg,
-    rgba(40, 58, 88,1) 0%,
-    rgba(54, 69, 98, 0) 100%
+    0deg,
+    rgba(30, 42, 62, 1) 0%,
+    rgba(54, 69, 98, 0.1) 100%
   );
+  -webkit-backdrop-filter: blur(12.5px);
+  backdrop-filter: blur(12.5px);
   backdrop-filter: blur(12.5px);
 }

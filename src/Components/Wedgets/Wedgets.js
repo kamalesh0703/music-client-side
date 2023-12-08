@@ -8,7 +8,7 @@ function Wedgets({artistID}) {
     const [featured,setFeatured]=useState([]);
     const [newRelease,setNewRelease]=useState([]);
     useEffect(()=>{
-      console.log(artistID);
+      console.log(similar);
     })
     useEffect(()=>{
       if (artistID) {
@@ -17,6 +17,7 @@ function Wedgets({artistID}) {
           .then((res) => {
             const a = res.data?.artists.slice(0, 3);
             setSimilar(a);
+          
           })
           .catch((err) => console.error(err));
   

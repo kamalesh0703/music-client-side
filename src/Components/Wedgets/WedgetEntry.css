@@ -4,6 +4,9 @@
     display: flex;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 5px 0px;
+    cursor: pointer;
+
 }
 .entry-image{
     width: 50px ;
@@ -28,4 +31,5 @@ font-weight: 600;
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    padding-left: 10px;
 }
